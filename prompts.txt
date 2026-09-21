@@ -1,104 +1,93 @@
-================================================================================
-UNIVERSIDADE POSITIVO - AVALIAÇÃO DE DATA SCIENCE
-PROFESSOR: LEANDRO ESCOBAR
-REGISTRO AUDITÁVEL DE PROMPTS DE IA GENERATIVA (ARQUIVO SEPARADO .TXT)
-================================================================================
+RELATÓRIO DE REGISTRO DE PROMPTS - DATA SCIENCE (PEDRO BAHRY)
 
-Este arquivo contém o registro integral de todos os prompts utilizados como apoio
-técnico à elaboração do código, checagem analítica e conferência de fórmulas para
-as questões teóricas (1 a 3) e práticas (4 a 10) da avaliação.
+# Prompts - Questão 1: Governança de Dados e LGPD
 
-Todas as análises interpretativas, tomadas de decisão estatística e conclusões 
-práticas para a gestão da vinícola foram redigidas e fundamentadas pelo estudante,
-em total conformidade com a Política de Integridade Acadêmica da Universidade Positivo.
+### Item a)
+Prompt: "dado essa interação acima, corrija erros de português e organize meu fluxo de pensamentos."
 
---------------------------------------------------------------------------------
-QUESTÃO 1 : Governança de Dados e LGPD (Teórica)
---------------------------------------------------------------------------------
-PROMPT UTILIZADO:
-"Consulte o texto da Lei Geral de Proteção de Dados (Lei 13.709/2018) e aponte os incisos aplicáveis dos artigos 7º e 18 para um caso em que um fornecedor de matéria-prima (uva) solicita exclusão de seu e-mail de contato cadastrado em base compartilhada de vinícola, considerando a base legal da coleta original e as responsabilidades conceituais de Data Owner, Data Steward e Data Custodian."
+### Item b)
+Não houve necessidade de utilização de IA para este item.
 
-FINALIDADE TÉCNICA:
-Conferência estrita dos incisos legais da Lei 13.709/2018 (art. 18, II e VI; art. 7º, V) para assegurar rigor jurídico no enquadramento. A delimitação dos papéis na vinícola e argumentação foram desenvolvidas pelo estudante.
+### Item c)
+Prompt: "dado essa interação acima, corrija erros de português e organize meu fluxo de pensamentos, anexe também os dados pesquisados sobre o artigo (Art. 7º, II e Art. 16, I da LGPD)"
 
---------------------------------------------------------------------------------
-QUESTÃO 2 : Amostragem, Distribuição e Medidas Descritivas (Teórica)
---------------------------------------------------------------------------------
-PROMPT UTILIZADO:
-"Forneça a dedução teórica formal do erro-padrão da média amostral a partir da variância da soma de variáveis aleatórias independentes e identicamente distribuídas (i.i.d.) com tamanho amostral n=30, indicando a relação matemática com o desvio-padrão populacional conforme o Teorema Central do Limite e a definição conceitual de ponto de ruptura da média vs mediana."
+------------------------------------------------------------
 
-FINALIDADE TÉCNICA:
-Validação teórica da relação matemática sigma_X_barra = sigma / sqrt(n) e fixação do conceito de ponto de ruptura assintótico (0% para média, 50% para mediana).
+# Prompts - Questão 2: Amostragem, Distribuição e Medidas Descritivas
 
---------------------------------------------------------------------------------
-QUESTÃO 3 : Correlação e Testes de Hipótese (Teórica)
---------------------------------------------------------------------------------
-PROMPT UTILIZADO:
-"Escreva a definição probabilística formal do valor-p sob a teoria frequentista de Fisher/Neyman-Pearson demonstrando a falácia de interpretá-lo como P(H1|dados). Em seguida, compare matematicamente os coeficientes de Spearman e Kendall para pares contínuos com violação de normalidade bivariada e forneça a definição exata de erro Tipo I e Tipo II."
+### Item a)
+Não houve necessidade de utilização de IA para este item.
 
-FINALIDADE TÉCNICA:
-Verificação das fórmulas e definições das probabilidades condicionais do valor-p e dos erros de decisão inferencial, servindo de base para o exemplo prático com o dataset do vinho.
+### Item b)
+Prompt: "explique de forma simples de prova por que a média não é a mais robusta, quando usar mediana e o que o CV mostra que o desvio padrão não mostra."
 
---------------------------------------------------------------------------------
-QUESTÃO 4 : Amostragem Estratificada e Teorema Central do Limite (Prática)
---------------------------------------------------------------------------------
-PROMPT UTILIZADO:
-"Atue como especialista em inferência estatística. Valide a conformidade da fórmula teórica do erro-padrão no Teorema Central do Limite para a variável contínua prolina do load_wine com N=178 e n=36. Confirme se a redução teórica de sigma / sqrt(n) resulta estritamente em um fator de 6 vezes e compare com a reamostragem bootstrap com reposição para B=1000."
+### Item c)
+Prompt: "qual é a relação matemática entre desvio padrao amostral das medias e desvio da populacao pelo teorema central do limite para n=30?"
 
-FINALIDADE TÉCNICA:
-Conferência dos graus de liberdade (ddof=0 para parâmetros da população finita e ddof=1 para estimativas bootstrap da amostra) e validação do fator de contração sqrt(36) = 6,00.
+------------------------------------------------------------
 
---------------------------------------------------------------------------------
-QUESTÃO 5 : Medidas de Posição, Dispersão e Outliers (Prática)
---------------------------------------------------------------------------------
-PROMPT UTILIZADO:
-"Forneça uma rotina em pandas 3.0 para iterar sobre groupby de cultivares calculando std() / mean() * 100 de forma vetorizada, evitando erros de chave de coluna em apply(numeric_only). Em seguida, monte o critério de Tukey 1.5xIQR por estrato individual para gerar a contagem exata de outliers."
+# Prompts - Questão 3: Correlação e Testes de Hipótese
 
-FINALIDADE TÉCNICA:
-Resolução de incompatibilidades de sintaxe em agrupamentos do pandas 3.0 e estruturação da regra de Tukey (1,5 * IQR) intragrupo.
+### Item a)
+1º Prompt: "o valor p, diz se a hipotese está correta?"
+2º Prompt: "organize essas respostas que criei de uma forma coerente e organizada, sem erros ortograficos."
 
---------------------------------------------------------------------------------
-QUESTÃO 6 : Forma da Distribuição e Normalidade (Prática)
---------------------------------------------------------------------------------
-PROMPT UTILIZADO:
-"Verifique a sintaxe correta da função scipy.stats.skew com ajuste de viés (bias=False) para amostras finitas e confirme o limiar convencional de Bulmer para classificação de assimetria moderada vs severa (> 0.5 e > 1.0). Apresente também a parametrização do teste de Shapiro-Wilk no SciPy."
+### Item b)
+1º Prompt: "me explique sobre pearson e shapiro-wilk no campo da analise de dados"
+2º Prompt: "organize e melhore o meu texto utilizando a skill humanizer."
 
-FINALIDADE TÉCNICA:
-Ajuste fino do cálculo não-enviesado de assimetria de Fisher-Pearson e conferência dos pontos de corte morfológicos.
+### Item c)
+Prompt: "explique por que resultado estatisticamente significativo não é sinônimo de relevante na prática usando o dataset wine, com texto direto e simples estilo resposta de prova"
 
---------------------------------------------------------------------------------
-QUESTÃO 7 : Correlação, Significância e Redundância (Prática)
---------------------------------------------------------------------------------
-PROMPT UTILIZADO:
-"Escreva o código em Python para calcular manualmente a estatística t de Student do teste de hipótese para a correlação linear de Pearson e sua função de distribuição acumulada bilateral em scipy.stats.t. Em seguida, calcule a matriz 13x13 e filtre pares com abs(r) > 0.7 excluindo flavanoids e total_phenols."
+------------------------------------------------------------
 
-FINALIDADE TÉCNICA:
-Dedução analítica da fórmula t = r * sqrt(n - 2) / sqrt(1 - r^2) e implementação do p-valor bilateral para validação com o comando oficial scipy.stats.pearsonr.
+# Prompts - Questão 4: Amostragem Estratificada e Teorema Central do Limite
 
---------------------------------------------------------------------------------
-QUESTÃO 8 : Teste de Hipótese entre Dois Grupos (Prática)
---------------------------------------------------------------------------------
-PROMPT UTILIZADO:
-"Analise a equivalência matemática entre os testes de Kruskal-Wallis e Mann-Whitney para comparação de dois grupos independentes no SciPy. Explique por que o teste t falha em detectar diferença com p=0.085 enquanto Kruskal detecta com p=0.0005 frente a assimetria com outliers, auxiliando na redação da justificativa para tomada de decisão prática do enólogo."
+1º Prompt: "como fazer amostragem estratificada de 20% por cultivar no wine dataset com random_state=42 e comparar os histogramas de proline na amostra e na populacao?"
+2º Prompt: "como simular o TCL com 1000 reamostragens da media de proline em python e validar se o erro padrao observado bate com sigma / sqrt(n)?"
 
-FINALIDADE TÉCNICA:
-Compreensão da perda de poder estatístico do teste t frente a caudas pesadas com valores extremos (outliers) e suporte à tradução enológica sem jargões.
+------------------------------------------------------------
 
---------------------------------------------------------------------------------
-QUESTÃO 9 : ANOVA / Kruskal-Wallis com Post-Hoc (Prática)
---------------------------------------------------------------------------------
-PROMPT UTILIZADO:
-"Demonstre a execução do Tukey HSD via statsmodels para três grupos independentes de vinho, gerando a tabela de contrastes médios e intervalos de confiança simultâneos a 95% com correção para erro familiar, orientando sobre a interpretação do valor-p para evitar falácias frequentistas."
+# Prompts - Questão 5: Medidas de Posição, Dispersão e Outliers
 
-FINALIDADE TÉCNICA:
-Parametrização da rotina pairwise_tukeyhsd da biblioteca statsmodels e tabulação dos intervalos de confiança simultâneos a 95%.
+1º Prompt: "como calcular media, mediana, desvio padrao e coeficiente de variacao CV por cultivar para as 13 colunas do load_wine no pandas?"
+2º Prompt: "como aplicar a regra de 1.5xIQR para achar outliers dentro de cada cultivar nas 3 variáveis de maior CV e plotar os boxplots?"
 
---------------------------------------------------------------------------------
-QUESTÃO 10 : Questão Integradora (Prática)
---------------------------------------------------------------------------------
-PROMPT UTILIZADO:
-"Na amostra estratificada de 60% com random_state=7 do Wine Dataset, realize a filtragem de pares correlacionados excluindo o par já analisado na Q7 ('flavanoids' e 'od280/od315') e o par da aula ('flavanoids' e 'total_phenols'). Em seguida, verifique se a variável 'alcohol' atende aos pressupostos de normalidade e homocedasticidade para aplicação de ANOVA e Tukey HSD, fornecendo as métricas exatas para sustentar a conclusão sobre política de preços."
+------------------------------------------------------------
 
-FINALIDADE TÉCNICA:
-Identificação do par mais redundante (total_phenols x od280/od315, r = +0.7045) e extração precisa das estatísticas de teste de álcool para subsidiar a redação executiva de precificação.
-================================================================================
+# Prompts - Questão 6: Forma da Distribuição e Normalidade
+
+1º Prompt: "como calcular a assimetria skewness e o teste de shapiro-wilk para magnesium, malic_acid, proanthocyanins e hue no wine dataset e plotar histogramas com KDE?"
+2º Prompt: "com base na assimetria e outliers, quando devo escolher media ou mediana como valor tipico?"
+
+------------------------------------------------------------
+
+# Prompts - Questão 7: Correlação, Significância e Redundância
+
+1º Prompt: "como calcular a matriz de correlacao do wine dataset e filtrar pares com |r| > 0.7 tirando flavanoids x total_phenols?"
+2º Prompt: "como calcular a estatistica t na mao para o r de pearson t = r*sqrt(n-2)/sqrt(1-r^2) e conferir com scipy.stats.pearsonr?"
+3º Prompt: "se shapiro rejeitar normalidade, como calcular spearman e kendall tau para esse par?"
+
+------------------------------------------------------------
+
+# Prompts - Questão 8: Teste de Hipótese entre Dois Grupos
+
+1º Prompt: "como comparar magnesium entre Cultivar B e Cultivar C testando normalidade com shapiro e homocedasticidade com levene no scipy?"
+2º Prompt: "como a normalidade deu p < 0.05 no cultivar B, qual teste devo usar (kruskal ou teste t) e como explicar o resultado em palavras simples pro enologo?"
+
+------------------------------------------------------------
+
+# Prompts - Questão 9: ANOVA / Kruskal-Wallis com Post-Hoc
+
+1º Prompt: "como testar se malic_acid varia entre os 3 cultivares, checando shapiro e levene, e rodando anova ou kruskal?"
+2º Prompt: "como rodar o post-hoc de tukey HSD no statsmodels para ver quais cultivares diferem entre si e interpretar o valor-p sem errar?"
+
+------------------------------------------------------------
+
+# Prompts - Questão 10: Questão Integradora
+
+1º Prompt: "como tirar amostra estratificada de 60% com random_state=7 e achar o par mais redundante na matriz de correlacao excluindo os pares da questao 7?"
+2º Prompt: "na amostra de 60%, como testar se alcohol difere entre cultivares e redigir uma conclusao de 15 linhas ligando redundancia e preco?"
+
+------------------------------------------------------------
+
