@@ -2,6 +2,12 @@
 
 Avalia a morfologia distribucional de quatro compostos químicos chave do vinho
 (magnesium, malic_acid, proanthocyanins e hue) para subsidiar a escolha entre média e mediana.
+
+Prompt de Auditoria Utilizado:
+"Verifique a sintaxe correta da função scipy.stats.skew com ajuste de viés (bias=False)
+para amostras finitas e confirme o limiar convencional de Bulmer para classificação
+de assimetria moderada vs severa (> 0.5 e > 1.0). Apresente também a parametrização
+do teste de Shapiro-Wilk no SciPy."
 """
 
 from pathlib import Path

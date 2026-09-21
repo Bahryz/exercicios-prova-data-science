@@ -1,0 +1,104 @@
+================================================================================
+UNIVERSIDADE POSITIVO - AVALIAÇÃO DE DATA SCIENCE
+PROFESSOR: LEANDRO ESCOBAR
+REGISTRO AUDITÁVEL DE PROMPTS DE IA GENERATIVA (ARQUIVO SEPARADO .TXT)
+================================================================================
+
+Este arquivo contém o registro integral de todos os prompts utilizados como apoio
+técnico à elaboração do código, checagem analítica e conferência de fórmulas para
+as questões teóricas (1 a 3) e práticas (4 a 10) da avaliação.
+
+Todas as análises interpretativas, tomadas de decisão estatística e conclusões 
+práticas para a gestão da vinícola foram redigidas e fundamentadas pelo estudante,
+em total conformidade com a Política de Integridade Acadêmica da Universidade Positivo.
+
+--------------------------------------------------------------------------------
+QUESTÃO 1 : Governança de Dados e LGPD (Teórica)
+--------------------------------------------------------------------------------
+PROMPT UTILIZADO:
+"Consulte o texto da Lei Geral de Proteção de Dados (Lei 13.709/2018) e aponte os incisos aplicáveis dos artigos 7º e 18 para um caso em que um fornecedor de matéria-prima (uva) solicita exclusão de seu e-mail de contato cadastrado em base compartilhada de vinícola, considerando a base legal da coleta original e as responsabilidades conceituais de Data Owner, Data Steward e Data Custodian."
+
+FINALIDADE TÉCNICA:
+Conferência estrita dos incisos legais da Lei 13.709/2018 (art. 18, II e VI; art. 7º, V) para assegurar rigor jurídico no enquadramento. A delimitação dos papéis na vinícola e argumentação foram desenvolvidas pelo estudante.
+
+--------------------------------------------------------------------------------
+QUESTÃO 2 : Amostragem, Distribuição e Medidas Descritivas (Teórica)
+--------------------------------------------------------------------------------
+PROMPT UTILIZADO:
+"Forneça a dedução teórica formal do erro-padrão da média amostral a partir da variância da soma de variáveis aleatórias independentes e identicamente distribuídas (i.i.d.) com tamanho amostral n=30, indicando a relação matemática com o desvio-padrão populacional conforme o Teorema Central do Limite e a definição conceitual de ponto de ruptura da média vs mediana."
+
+FINALIDADE TÉCNICA:
+Validação teórica da relação matemática sigma_X_barra = sigma / sqrt(n) e fixação do conceito de ponto de ruptura assintótico (0% para média, 50% para mediana).
+
+--------------------------------------------------------------------------------
+QUESTÃO 3 : Correlação e Testes de Hipótese (Teórica)
+--------------------------------------------------------------------------------
+PROMPT UTILIZADO:
+"Escreva a definição probabilística formal do valor-p sob a teoria frequentista de Fisher/Neyman-Pearson demonstrando a falácia de interpretá-lo como P(H1|dados). Em seguida, compare matematicamente os coeficientes de Spearman e Kendall para pares contínuos com violação de normalidade bivariada e forneça a definição exata de erro Tipo I e Tipo II."
+
+FINALIDADE TÉCNICA:
+Verificação das fórmulas e definições das probabilidades condicionais do valor-p e dos erros de decisão inferencial, servindo de base para o exemplo prático com o dataset do vinho.
+
+--------------------------------------------------------------------------------
+QUESTÃO 4 : Amostragem Estratificada e Teorema Central do Limite (Prática)
+--------------------------------------------------------------------------------
+PROMPT UTILIZADO:
+"Atue como especialista em inferência estatística. Valide a conformidade da fórmula teórica do erro-padrão no Teorema Central do Limite para a variável contínua prolina do load_wine com N=178 e n=36. Confirme se a redução teórica de sigma / sqrt(n) resulta estritamente em um fator de 6 vezes e compare com a reamostragem bootstrap com reposição para B=1000."
+
+FINALIDADE TÉCNICA:
+Conferência dos graus de liberdade (ddof=0 para parâmetros da população finita e ddof=1 para estimativas bootstrap da amostra) e validação do fator de contração sqrt(36) = 6,00.
+
+--------------------------------------------------------------------------------
+QUESTÃO 5 : Medidas de Posição, Dispersão e Outliers (Prática)
+--------------------------------------------------------------------------------
+PROMPT UTILIZADO:
+"Forneça uma rotina em pandas 3.0 para iterar sobre groupby de cultivares calculando std() / mean() * 100 de forma vetorizada, evitando erros de chave de coluna em apply(numeric_only). Em seguida, monte o critério de Tukey 1.5xIQR por estrato individual para gerar a contagem exata de outliers."
+
+FINALIDADE TÉCNICA:
+Resolução de incompatibilidades de sintaxe em agrupamentos do pandas 3.0 e estruturação da regra de Tukey (1,5 * IQR) intragrupo.
+
+--------------------------------------------------------------------------------
+QUESTÃO 6 : Forma da Distribuição e Normalidade (Prática)
+--------------------------------------------------------------------------------
+PROMPT UTILIZADO:
+"Verifique a sintaxe correta da função scipy.stats.skew com ajuste de viés (bias=False) para amostras finitas e confirme o limiar convencional de Bulmer para classificação de assimetria moderada vs severa (> 0.5 e > 1.0). Apresente também a parametrização do teste de Shapiro-Wilk no SciPy."
+
+FINALIDADE TÉCNICA:
+Ajuste fino do cálculo não-enviesado de assimetria de Fisher-Pearson e conferência dos pontos de corte morfológicos.
+
+--------------------------------------------------------------------------------
+QUESTÃO 7 : Correlação, Significância e Redundância (Prática)
+--------------------------------------------------------------------------------
+PROMPT UTILIZADO:
+"Escreva o código em Python para calcular manualmente a estatística t de Student do teste de hipótese para a correlação linear de Pearson e sua função de distribuição acumulada bilateral em scipy.stats.t. Em seguida, calcule a matriz 13x13 e filtre pares com abs(r) > 0.7 excluindo flavanoids e total_phenols."
+
+FINALIDADE TÉCNICA:
+Dedução analítica da fórmula t = r * sqrt(n - 2) / sqrt(1 - r^2) e implementação do p-valor bilateral para validação com o comando oficial scipy.stats.pearsonr.
+
+--------------------------------------------------------------------------------
+QUESTÃO 8 : Teste de Hipótese entre Dois Grupos (Prática)
+--------------------------------------------------------------------------------
+PROMPT UTILIZADO:
+"Analise a equivalência matemática entre os testes de Kruskal-Wallis e Mann-Whitney para comparação de dois grupos independentes no SciPy. Explique por que o teste t falha em detectar diferença com p=0.085 enquanto Kruskal detecta com p=0.0005 frente a assimetria com outliers, auxiliando na redação da justificativa para tomada de decisão prática do enólogo."
+
+FINALIDADE TÉCNICA:
+Compreensão da perda de poder estatístico do teste t frente a caudas pesadas com valores extremos (outliers) e suporte à tradução enológica sem jargões.
+
+--------------------------------------------------------------------------------
+QUESTÃO 9 : ANOVA / Kruskal-Wallis com Post-Hoc (Prática)
+--------------------------------------------------------------------------------
+PROMPT UTILIZADO:
+"Demonstre a execução do Tukey HSD via statsmodels para três grupos independentes de vinho, gerando a tabela de contrastes médios e intervalos de confiança simultâneos a 95% com correção para erro familiar, orientando sobre a interpretação do valor-p para evitar falácias frequentistas."
+
+FINALIDADE TÉCNICA:
+Parametrização da rotina pairwise_tukeyhsd da biblioteca statsmodels e tabulação dos intervalos de confiança simultâneos a 95%.
+
+--------------------------------------------------------------------------------
+QUESTÃO 10 : Questão Integradora (Prática)
+--------------------------------------------------------------------------------
+PROMPT UTILIZADO:
+"Na amostra estratificada de 60% com random_state=7 do Wine Dataset, realize a filtragem de pares correlacionados excluindo o par já analisado na Q7 ('flavanoids' e 'od280/od315') e o par da aula ('flavanoids' e 'total_phenols'). Em seguida, verifique se a variável 'alcohol' atende aos pressupostos de normalidade e homocedasticidade para aplicação de ANOVA e Tukey HSD, fornecendo as métricas exatas para sustentar a conclusão sobre política de preços."
+
+FINALIDADE TÉCNICA:
+Identificação do par mais redundante (total_phenols x od280/od315, r = +0.7045) e extração precisa das estatísticas de teste de álcool para subsidiar a redação executiva de precificação.
+================================================================================

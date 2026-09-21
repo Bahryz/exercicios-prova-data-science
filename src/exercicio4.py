@@ -2,6 +2,13 @@
 
 Demonstra a representatividade da amostragem estratificada e a convergência
 da distribuição das médias amostrais para a variável prolina (proline).
+
+Prompt de Auditoria Utilizado:
+"Atue como especialista em inferência estatística. Valide a conformidade da fórmula
+teórica do erro-padrão no Teorema Central do Limite para a variável contínua prolina
+do load_wine com N=178 e n=36. Confirme se a redução teórica de sigma / sqrt(n) resulta
+estritamente em um fator de 6 vezes e compare com a reamostragem bootstrap com reposição
+para B=1000."
 """
 
 from pathlib import Path

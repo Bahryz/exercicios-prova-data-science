@@ -2,6 +2,13 @@
 
 Avalia a concentração de magnésio (magnesium), testa os pressupostos
 de normalidade e homocedasticidade e seleciona o teste inferencial adequado.
+
+Prompt de Auditoria Utilizado:
+"Analise a equivalência matemática entre os testes de Kruskal-Wallis e Mann-Whitney
+para comparação de dois grupos independentes no SciPy. Explique por que o teste t
+falha em detectar diferença com p=0.085 enquanto Kruskal detecta com p=0.0005 frente
+a assimetria com outliers, auxiliando na redação da justificativa para tomada de decisão
+prática do enólogo."
 """
 
 from pathlib import Path

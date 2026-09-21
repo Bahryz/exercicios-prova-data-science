@@ -2,6 +2,11 @@
 
 Analisa o teor de ácido málico (malic_acid) entre os três cultivares de uva,
 avalia pressupostos paramétricos e identifica contrastes empíricos estatisticamente significativos.
+
+Prompt de Auditoria Utilizado:
+"Demonstre a execução do Tukey HSD via statsmodels para três grupos independentes de vinho,
+gerando a tabela de contrastes médios e intervalos de confiança simultâneos a 95% com correção
+para erro familiar, orientando sobre a interpretação do valor-p para evitar falácias frequentistas."
 """
 
 from pathlib import Path

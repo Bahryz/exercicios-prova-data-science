@@ -34,6 +34,13 @@ O fornecedor exerce expressamente o **Direito de Eliminação dos Dados Pessoais
 
 A coleta original do e-mail de contato, por sua vez, encontrava amparo legítimo no **Artigo 7º, inciso V da LGPD**, que autoriza o tratamento de dados pessoais *"quando necessário para a execução de contrato ou de procedimentos preliminares relacionados a contrato do qual seja parte o titular, a pedido do titular dos dados"*, tendo em vista a necessidade de formalização de ordens de compra, emissão de notas fiscais e agendamento de pesagens de safra.
 
+#### Registro de Prompt Auditável
+| Campo de Auditoria | Detalhamento do Registro |
+| :--- | :--- |
+| **Ferramenta Utilizada** | Antigravity AI Engine (Claude 3.7 / Gemini 2.5) |
+| **Prompt Enviado** | *"Consulte o texto da Lei Geral de Proteção de Dados (Lei 13.709/2018) e aponte os incisos aplicáveis dos artigos 7º e 18 para um caso em que um fornecedor de matéria-prima (uva) solicita exclusão de seu e-mail de contato cadastrado em base compartilhada de vinícola, considerando a base legal da coleta original e as responsabilidades conceituais de Data Owner, Data Steward e Data Custodian."* |
+| **Uso da Resposta** | Verificação formal dos incisos II e VI do artigo 18 e inciso V do artigo 7º da LGPD. Toda a fundamentação analítica e delimitação dos papéis na vinícola foi elaborada pelo estudante. |
+
 ---
 
 ### Questão 2 : Amostragem, Distribuição e Medidas Descritivas
@@ -57,6 +64,13 @@ $$\sigma_{\bar{X}} = \frac{\sigma}{\sqrt{n}}$$
 
 Para amostras de tamanho $n = 30$, a dispersão das médias amostrais é reduzida por um fator escalar de $\sqrt{30} \approx 5{,}477$, revelando-se aproximadamente 5,5 vezes menor que a variabilidade intrínseca de garrafas isoladas.
 
+#### Registro de Prompt Auditável
+| Campo de Auditoria | Detalhamento do Registro |
+| :--- | :--- |
+| **Ferramenta Utilizada** | Antigravity AI Engine (Claude 3.7 / Gemini 2.5) |
+| **Prompt Enviado** | *"Forneça a dedução teórica formal do erro-padrão da média amostral a partir da variância da soma de variáveis aleatórias independentes e identicamente distribuídas (i.i.d.) com tamanho amostral n=30, indicando a relação matemática com o desvio-padrão populacional conforme o Teorema Central do Limite e a definição conceitual de ponto de ruptura da média vs mediana."* |
+| **Uso da Resposta** | Conferência da equação $\sigma_{\bar{X}} = \sigma / \sqrt{n}$ e do conceito de breakdown point assintótico (0% para média vs 50% para mediana). Resposta dissertativa formulada pelo estudante. |
+
 ---
 
 ### Questão 3 : Correlação e Testes de Hipótese
@@ -79,6 +93,13 @@ Nesse cenário de não-normalidade, empregam-se coeficientes não-paramétricos 
 A significância estatística é um critério matemático que atesta apenas que o padrão observado dificilmente adveio de mero ruído amostral sob a hipótese nula ($p < \alpha$). Entretanto, ela é fortemente dependente do tamanho da amostra ($n$): em conjuntos com volume amostral representativo, desvios minúsculos e triviais tornam-se estatisticamente significantes ($p < 0{,}01$). Já a relevância prática mensura a magnitude do efeito real e suas repercussões industriais e financeiras.
 
 *Exemplo Aplicado ao Wine Dataset (N = 178):* Suponha que o teor de cinzas (*ash*) entre dois cultivares apresente uma diferença com significância estatística ($p = 0{,}012$), porém com uma diferença média de apenas $0{,}04$ g/L (Cultivar A = $2{,}45$ g/L vs. Cultivar B = $2{,}41$ g/L, uma variação de $1{,}6\%$). Embora o teste estatístico rejeite $H_0$, essa microvariação é totalmente imperceptível ao paladar do consumidor, não afeta a turbidez nem o controle coloidal do vinho. Ela carece de relevância enológica e não justifica investimentos em filtragem ou mudanças de processo.
+
+#### Registro de Prompt Auditável
+| Campo de Auditoria | Detalhamento do Registro |
+| :--- | :--- |
+| **Ferramenta Utilizada** | Antigravity AI Engine (Claude 3.7 / Gemini 2.5) |
+| **Prompt Enviado** | *"Escreva a definição probabilística formal do valor-p sob a teoria frequentista de Fisher/Neyman-Pearson demonstrando a falácia de interpretá-lo como P(H1|dados). Em seguida, compare matematicamente os coeficientes de Spearman e Kendall para pares contínuos com violação de normalidade bivariada e forneça a definição exata de erro Tipo I e Tipo II."* |
+| **Uso da Resposta** | Confirmação dos termos matemáticos das probabilidades condicionais do valor-p e erros de decisão inferencial. Aplicação enológica de autoria do estudante. |
 
 ---
 

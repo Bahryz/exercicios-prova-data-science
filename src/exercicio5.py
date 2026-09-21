@@ -2,6 +2,11 @@
 
 Calcula estatísticas descritivas completas para as 13 variáveis por cultivar,
 identifica as variáveis de maior dispersão relativa e mapeia anomalias enológicas.
+
+Prompt de Auditoria Utilizado:
+"Forneça uma rotina em pandas 3.0 para iterar sobre groupby de cultivares calculando
+std() / mean() * 100 de forma vetorizada, evitando erros de chave de coluna em apply(numeric_only).
+Em seguida, monte o critério de Tukey 1.5xIQR por estrato individual para gerar a contagem exata de outliers."
 """
 
 from pathlib import Path
