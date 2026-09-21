@@ -1,93 +1,151 @@
-RELATÓRIO DE REGISTRO DE PROMPTS - DATA SCIENCE (PEDRO BAHRY)
+CADERNO DE RESPOSTAS E REGISTRO DE PROMPTS - DATA SCIENCE (PEDRO BAHRY)
 
-# Prompts - Questão 1: Governança de Dados e LGPD
+# Questão 1: Governança de Dados e LGPD
 
-### Item a)
-Prompt: "dado essa interação acima, corrija erros de português e organize meu fluxo de pensamentos."
+## Enunciado
+Uma vinícola decide digitalizar seu controle de qualidade e passa a armazenar, em uma única planilha compartilhada entre os setores de produção e comercial, o nome do enólogo responsável por cada lote, o e-mail de contato dos fornecedores de uva e os resultados das análises químicas de cada lote (incluindo variáveis como teor alcoólico e teor de flavonoides). Um dos fornecedores solicita, por e-mail, a exclusão de seus dados de contato da base da vinícola.
+a) Atribua os papéis de Data Owner, Data Steward e Data Custodian a três funções distintas dentro dessa vinícola, justificando a responsabilidade de cada papel diante do pedido do fornecedor.
+b) Classifique, segundo os níveis de sensibilidade vistos em aula (Público, Interno, Confidencial, Sensível), o e-mail de contato do fornecedor e os resultados das análises químicas do lote, justificando a diferença de tratamento entre os dois tipos de dado.
+c) Identifique qual direito do titular, entre os previstos no art. 18 da LGPD, está sendo exercido pelo fornecedor, e qual base legal do art. 7º provavelmente amparava a coleta original do e-mail de contato.
 
-### Item b)
-Não houve necessidade de utilização de IA para este item.
+## Registro de Prompts (IA Generativa)
+- **Item a):** Prompt: "dado essa interação acima, corrija erros de português e organize meu fluxo de pensamentos."
+- **Item b):** Não houve necessidade de utilização de IA para este item.
+- **Item c):** Prompt: "dado essa interação acima, corrija erros de português e organize meu fluxo de pensamentos, anexe também os dados pesquisados sobre o artigo (Art. 7º, II e Art. 16, I da LGPD)"
 
-### Item c)
-Prompt: "dado essa interação acima, corrija erros de português e organize meu fluxo de pensamentos, anexe também os dados pesquisados sobre o artigo (Art. 7º, II e Art. 16, I da LGPD)"
+======================================================================
 
-------------------------------------------------------------
+# Questão 2: Amostragem, Distribuição e Medidas Descritivas
 
-# Prompts - Questão 2: Amostragem, Distribuição e Medidas Descritivas
+## Enunciado
+Um novo inspetor de qualidade propõe avaliar um lote de vinho analisando apenas as 30 primeiras garrafas listadas na planilha de controle, na ordem em que foram cadastradas, em vez de sortear as garrafas a analisar.
+a) Explique por que esse procedimento não constitui uma amostragem aleatória e qual problema de representatividade ele pode gerar. Considerando que o lote é composto por três cultivares em proporções desiguais, indique qual das quatro técnicas de amostragem probabilística vistas em aula (aleatória simples, sistemática, estratificada ou por conglomerados) seria mais adequada, e justifique.
+b) Um colega afirma que "a média do teor alcoólico é sempre a melhor medida para comparar cultivares, porque a média é a medida de posição mais robusta". Avalie essa afirmação: explique em que circunstância a mediana é preferível à média, e explique o que o coeficiente de variação (CV) permite concluir que o desvio-padrão isolado não permite.
+c) Sem realizar nenhum cálculo, explique por que o desvio-padrão de 1.000 médias amostrais (cada uma calculada a partir de amostras de tamanho n = 30) tende a ser menor que o desvio-padrão da população de onde essas amostras foram retiradas. Nomeie o teorema que garante esse resultado e escreva a relação matemática entre os dois desvios-padrão.
 
-### Item a)
-Não houve necessidade de utilização de IA para este item.
+## Registro de Prompts (IA Generativa)
+- **Item a):** Não houve necessidade de utilização de IA para este item.
+- **Item b):** Prompt: "explique de forma simples de prova por que a média não é a mais robusta, quando usar mediana e o que o CV mostra que o desvio padrão não mostra."
+- **Item c):** Prompt: "qual é a relação matemática entre desvio padrao amostral das medias e desvio da populacao pelo teorema central do limite para n=30?"
 
-### Item b)
-Prompt: "explique de forma simples de prova por que a média não é a mais robusta, quando usar mediana e o que o CV mostra que o desvio padrão não mostra."
+======================================================================
 
-### Item c)
-Prompt: "qual é a relação matemática entre desvio padrao amostral das medias e desvio da populacao pelo teorema central do limite para n=30?"
+# Questão 3: Correlação e Testes de Hipótese
 
-------------------------------------------------------------
+## Enunciado
+Ao analisar os dados de um lote, um colega obtém um valor-p de 0,03 em um teste de hipótese e conclui: "isso significa que há 97% de chance de a hipótese alternativa ser verdadeira".
+a) Explique por que essa interpretação do valor-p está incorreta e escreva a interpretação correta. Em seguida, explique a diferença entre erro Tipo I e erro Tipo II, aplicando os dois conceitos a um exemplo de comparação entre dois cultivares de vinho.
+b) Suponha que, ao comparar duas variáveis físico-químicas do vinho, o coeficiente de correlação de Pearson calculado seja r = 0,81, mas o teste de Shapiro-Wilk rejeite a normalidade (p < 0,05) para uma das duas variáveis. Explique por que aplicar o teste de significância de Pearson nessas condições é inadequado, e indique quais dois coeficientes de correlação alternativos poderiam ser usados, diferenciando-os brevemente.
+c) Explique por que um resultado "estatisticamente significativo" não é sinônimo de "relevante na prática", propondo um exemplo plausível envolvendo as 178 amostras do Wine Recognition Dataset.
 
-# Prompts - Questão 3: Correlação e Testes de Hipótese
+## Registro de Prompts (IA Generativa)
+- **Item a):** 
+  - 1º Prompt: "o valor p, diz se a hipotese está correta?"
+  - 2º Prompt: "organize essas respostas que criei de uma forma coerente e organizada, sem erros ortograficos."
+- **Item b):** 
+  - 1º Prompt: "me explique sobre pearson e shapiro-wilk no campo da analise de dados"
+  - 2º Prompt: "organize e melhore o meu texto utilizando a skill humanizer."
+- **Item c):** 
+  - Prompt: "explique por que resultado estatisticamente significativo não é sinônimo de relevante na prática usando o dataset wine, com texto direto e simples estilo resposta de prova"
 
-### Item a)
-1º Prompt: "o valor p, diz se a hipotese está correta?"
-2º Prompt: "organize essas respostas que criei de uma forma coerente e organizada, sem erros ortograficos."
+======================================================================
 
-### Item b)
-1º Prompt: "me explique sobre pearson e shapiro-wilk no campo da analise de dados"
-2º Prompt: "organize e melhore o meu texto utilizando a skill humanizer."
+# Questão 4: Amostragem Estratificada e Teorema Central do Limite
 
-### Item c)
-Prompt: "explique por que resultado estatisticamente significativo não é sinônimo de relevante na prática usando o dataset wine, com texto direto e simples estilo resposta de prova"
+## Enunciado
+a) Monte uma amostra estratificada por cultivar correspondente a 20% das observações de cada grupo, respeitando a proporção original de cada cultivar no dataset, com random_state = 42 para garantir reprodutibilidade.
+b) Compare, em uma mesma figura, o histograma da variável proline na amostra estratificada e o histograma da mesma variável na população completa (178 amostras).
+c) A partir do tamanho da amostra obtida no item (a), realize 1.000 reamostragens com reposição da variável proline e calcule a média de cada reamostragem. Plote o histograma dessas 1.000 médias e compare, no texto, o desvio-padrão observado dessas médias com o valor teórico previsto pelo TCL (σ/√n), indicando quantas vezes o erro-padrão é menor que o desvio-padrão populacional.
+d) Conclua, em um parágrafo, se a amostra estratificada do item (a) é representativa da população quanto à variável proline.
 
-------------------------------------------------------------
+## Registro de Prompts (IA Generativa)
+- **1º Prompt:** "como fazer amostragem estratificada de 20% por cultivar no wine dataset com random_state=42 e comparar os histogramas de proline na amostra e na populacao?"
+- **2º Prompt:** "como simular o TCL com 1000 reamostragens da media de proline em python e validar se o erro padrao observado bate com sigma / sqrt(n)?"
 
-# Prompts - Questão 4: Amostragem Estratificada e Teorema Central do Limite
+======================================================================
 
-1º Prompt: "como fazer amostragem estratificada de 20% por cultivar no wine dataset com random_state=42 e comparar os histogramas de proline na amostra e na populacao?"
-2º Prompt: "como simular o TCL com 1000 reamostragens da media de proline em python e validar se o erro padrao observado bate com sigma / sqrt(n)?"
+# Questão 5: Medidas de Posição, Dispersão e Outliers
 
-------------------------------------------------------------
+## Enunciado
+a) Calcule, por cultivar, a média, a mediana, o desvio-padrão e o coeficiente de variação (CV) para as 13 variáveis físico-químicas do dataset, e identifique qual variável apresenta o maior CV médio entre os três cultivares.
+b) Aplicando a regra de 1,5×IQR, identifique os outliers para as três variáveis com maior CV médio encontradas no item (a), e conte quantos outliers existem em cada cultivar, para cada uma dessas variáveis.
+c) Construa boxplots comparativos entre os três cultivares para essas três variáveis.
+d) Conclua, com base no CV calculado, se existe um único cultivar consistentemente mais homogêneo que os demais, ou se a homogeneidade varia conforme a variável analisada.
 
-# Prompts - Questão 5: Medidas de Posição, Dispersão e Outliers
+## Registro de Prompts (IA Generativa)
+- **1º Prompt:** "como calcular media, mediana, desvio padrao e coeficiente de variacao CV por cultivar para as 13 colunas do load_wine no pandas?"
+- **2º Prompt:** "como aplicar a regra de 1.5xIQR para achar outliers dentro de cada cultivar nas 3 variáveis de maior CV e plotar os boxplots?"
 
-1º Prompt: "como calcular media, mediana, desvio padrao e coeficiente de variacao CV por cultivar para as 13 colunas do load_wine no pandas?"
-2º Prompt: "como aplicar a regra de 1.5xIQR para achar outliers dentro de cada cultivar nas 3 variáveis de maior CV e plotar os boxplots?"
+======================================================================
 
-------------------------------------------------------------
+# Questão 6: Forma da Distribuição e Normalidade
 
-# Prompts - Questão 6: Forma da Distribuição e Normalidade
+## Enunciado
+a) Para as variáveis magnesium, malic_acid, proanthocyanins e hue, calcule o coeficiente de assimetria (skewness) considerando os três cultivares em conjunto, e classifique cada variável como aproximadamente simétrica, assimétrica à direita ou assimétrica à esquerda.
+b) Plote o histograma com curva de densidade (KDE) para cada uma das quatro variáveis.
+c) Para cada variável, decida, com base no valor de assimetria e na presença ou ausência de outliers, se a média ou a mediana representa melhor o valor típico da variável. Aplique o teste de Shapiro-Wilk em pelo menos duas dessas variáveis para confirmar ou refutar a normalidade sugerida pelo histograma.
 
-1º Prompt: "como calcular a assimetria skewness e o teste de shapiro-wilk para magnesium, malic_acid, proanthocyanins e hue no wine dataset e plotar histogramas com KDE?"
-2º Prompt: "com base na assimetria e outliers, quando devo escolher media ou mediana como valor tipico?"
+## Registro de Prompts (IA Generativa)
+- **1º Prompt:** "como calcular a assimetria skewness e o teste de shapiro-wilk para magnesium, malic_acid, proanthocyanins e hue no wine dataset e plotar histogramas com KDE?"
+- **2º Prompt:** "com base na assimetria e outliers, quando devo escolher media ou mediana como valor tipico?"
 
-------------------------------------------------------------
+======================================================================
 
-# Prompts - Questão 7: Correlação, Significância e Redundância
+# Questão 7: Correlação, Significância e Redundância
 
-1º Prompt: "como calcular a matriz de correlacao do wine dataset e filtrar pares com |r| > 0.7 tirando flavanoids x total_phenols?"
-2º Prompt: "como calcular a estatistica t na mao para o r de pearson t = r*sqrt(n-2)/sqrt(1-r^2) e conferir com scipy.stats.pearsonr?"
-3º Prompt: "se shapiro rejeitar normalidade, como calcular spearman e kendall tau para esse par?"
+## Enunciado
+a) Calcule a matriz de correlação completa entre as 13 variáveis e liste todos os pares com |r| > 0,7, excluindo o par flavanoids × total_phenols já analisado em aula.
+b) Para o par de maior |r| encontrado no item (a), calcule manualmente a estatística t de significância (t = r·√(n−2)/√(1−r²)) e confira o resultado com scipy.stats.pearsonr, interpretando o p-valor obtido com α = 0,05.
+c) Verifique a normalidade (Shapiro-Wilk) das duas variáveis desse par. Caso alguma delas viole a normalidade, calcule também a correlação de Spearman e de Kendall para o mesmo par, comentando as diferenças encontradas em relação ao coeficiente de Pearson.
+d) Produza um heatmap da matriz de correlação completa e um scatter plot do par de maior correlação, colorido por cultivar e com a reta ajustada.
 
-------------------------------------------------------------
+## Registro de Prompts (IA Generativa)
+- **1º Prompt:** "como calcular a matriz de correlacao do wine dataset e filtrar pares com |r| > 0.7 tirando flavanoids x total_phenols?"
+- **2º Prompt:** "como calcular a estatistica t na mao para o r de pearson t = r*sqrt(n-2)/sqrt(1-r^2) e conferir com scipy.stats.pearsonr?"
+- **3º Prompt:** "se shapiro rejeitar normalidade, como calcular spearman e kendall tau para esse par?"
 
-# Prompts - Questão 8: Teste de Hipótese entre Dois Grupos
+======================================================================
 
-1º Prompt: "como comparar magnesium entre Cultivar B e Cultivar C testando normalidade com shapiro e homocedasticidade com levene no scipy?"
-2º Prompt: "como a normalidade deu p < 0.05 no cultivar B, qual teste devo usar (kruskal ou teste t) e como explicar o resultado em palavras simples pro enologo?"
+# Questão 8: Teste de Hipótese entre Dois Grupos
 
-------------------------------------------------------------
+## Enunciado
+a) Compare o teor de magnesium entre o Cultivar B e o Cultivar C.
+b) Verifique a normalidade de cada grupo (Shapiro-Wilk) e a homogeneidade das variâncias entre os dois grupos (Levene).
+c) Com base no resultado do item (b), escolha e justifique o teste apropriado (teste t de Student, caso os pressupostos sejam atendidos, ou Kruskal-Wallis, caso não sejam), e interprete o p-valor obtido considerando α = 0,05.
+d) Construa um boxplot comparativo dos dois grupos e redija, sem jargão estatístico, um parágrafo de conclusão para o enólogo-chefe.
 
-# Prompts - Questão 9: ANOVA / Kruskal-Wallis com Post-Hoc
+## Registro de Prompts (IA Generativa)
+- **1º Prompt:** "como comparar magnesium entre Cultivar B e Cultivar C testando normalidade com shapiro e homocedasticidade com levene no scipy?"
+- **2º Prompt:** "como a normalidade deu p < 0.05 no cultivar B, qual teste devo usar (kruskal ou teste t) e como explicar o resultado em palavras simples pro enologo?"
 
-1º Prompt: "como testar se malic_acid varia entre os 3 cultivares, checando shapiro e levene, e rodando anova ou kruskal?"
-2º Prompt: "como rodar o post-hoc de tukey HSD no statsmodels para ver quais cultivares diferem entre si e interpretar o valor-p sem errar?"
+======================================================================
 
-------------------------------------------------------------
+# Questão 9: ANOVA/Kruskal-Wallis com Post-Hoc
 
-# Prompts - Questão 10: Questão Integradora
+## Enunciado
+a) Verifique se o teor de malic_acid difere significativamente entre os três cultivares, checando a normalidade de cada grupo (Shapiro-Wilk) e a homogeneidade das variâncias entre os três grupos (Levene).
+b) Escolha e justifique o teste apropriado para comparar os três grupos (ANOVA ou Kruskal-Wallis), conforme o resultado do item (a).
+c) Caso o resultado seja significativo, aplique o teste post-hoc de Tukey HSD para identificar quais pares de cultivares diferem entre si.
+d) Construa um boxplot comparativo dos três cultivares e interprete o resultado em um parágrafo, evitando os erros de interpretação do valor-p discutidos em aula.
 
-1º Prompt: "como tirar amostra estratificada de 60% com random_state=7 e achar o par mais redundante na matriz de correlacao excluindo os pares da questao 7?"
-2º Prompt: "na amostra de 60%, como testar se alcohol difere entre cultivares e redigir uma conclusao de 15 linhas ligando redundancia e preco?"
+## Registro de Prompts (IA Generativa)
+- **1º Prompt:** "como testar se malic_acid varia entre os 3 cultivares, checando shapiro e levene, e rodando anova ou kruskal?"
+- **2º Prompt:** "como rodar o post-hoc de tukey HSD no statsmodels para ver quais cultivares diferem entre si e interpretar o valor-p sem errar?"
 
-------------------------------------------------------------
+======================================================================
+
+# Questão 10: Questão Integradora
+
+## Enunciado
+A diretoria da cooperativa avalia se é viável reduzir o número de testes laboratoriais por lote e se a diferença no teor alcoólico entre cultivares justifica uma política de preços diferenciada por cultivar.
+a) A partir da população completa (load_wine), monte uma amostra estratificada por cultivar correspondente a 60% das observações de cada grupo, com random_state = 7.
+b) Usando essa amostra, calcule a matriz de correlação completa e identifique as duas variáveis mais redundantes entre si, diferentes dos pares já utilizados na Questão 7.
+c) Ainda usando essa amostra, teste estatisticamente se há diferença significativa no teor de alcohol entre os três cultivares, escolhendo e justificando o teste apropriado a partir da verificação dos pressupostos de normalidade e homogeneidade de variâncias.
+d) Redija uma conclusão final, com no máximo 15 linhas, integrando: a representatividade da amostra construída no item (a), a redundância de variáveis identificada no item (b), e se a diferença no teor alcoólico encontrada no item (c) sustenta estatisticamente uma política de preços diferenciada por cultivar. A conclusão deve referenciar explicitamente as evidências estatísticas obtidas, não opiniões pessoais sobre o vinho.
+
+## Registro de Prompts (IA Generativa)
+- **1º Prompt:** "como tirar amostra estratificada de 60% com random_state=7 e achar o par mais redundante na matriz de correlacao excluindo os pares da questao 7?"
+- **2º Prompt:** "na amostra de 60%, como testar se alcohol difere entre cultivares e redigir uma conclusao de 15 linhas ligando redundancia e preco?"
+
+======================================================================
 

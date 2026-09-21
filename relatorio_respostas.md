@@ -15,7 +15,12 @@
 
 ## Questão 1: Governança de Dados e LGPD
 
+> **Enunciado Geral:**  
+> Uma vinícola decide digitalizar seu controle de qualidade e passa a armazenar, em uma única planilha compartilhada entre os setores de produção e comercial, o nome do enólogo responsável por cada lote, o e-mail de contato dos fornecedores de uva e os resultados das análises químicas de cada lote (incluindo variáveis como teor alcoólico e teor de flavonoides). Um dos fornecedores solicita, por e-mail, a exclusão de seus dados de contato da base da vinícola.
+
 ### Item a)
+> **Enunciado:** Atribua os papéis de Data Owner, Data Steward e Data Custodian a três funções distintas dentro dessa vinícola (por exemplo: diretor de qualidade, equipe de TI, enólogo-chefe), justificando a responsabilidade de cada papel diante do pedido do fornecedor.
+
 **Resposta:**  
 Diante de uma solicitação de exclusão de dados, o fluxo estabelecido inicia-se com o recebimento do pedido pelo gerente da área de Vendas/Comercial. Na sequência, o coordenador de Dados (Data Owner / Data Steward) é notificado para validar se os dados cadastrais podem ser excluídos sem ferir obrigações fiscais e sem comprometer os laudos químicos da safra. Por fim, o time de Dados & TI (Data Custodian) executa a exclusão definitiva e desassociação das informações na base de dados e planilhas compartilhadas, garantindo a conformidade com o fluxo interno e mantendo a rastreabilidade anônima do lote de vinho.
 
@@ -25,6 +30,8 @@ Diante de uma solicitação de exclusão de dados, o fluxo estabelecido inicia-s
 ---
 
 ### Item b)
+> **Enunciado:** Classifique, segundo os níveis de sensibilidade vistos em aula (Público, Interno, Confidencial, Sensível), o e-mail de contato do fornecedor e os resultados das análises químicas do lote, justificando a diferença de tratamento entre os dois tipos de dado.
+
 **Resposta:**  
 - **E-mail de contato do fornecedor:** Dado Confidencial (Dado Pessoal, Art. 5º, I da LGPD). Identifica uma pessoa física parceira comercial; não é sensível nos termos do Art. 5º, II, mas exige controle de acesso restrito aos setores de suprimentos/compras e não deve ficar exposto na produção.  
 - **Resultados das análises químicas do lote:** Dado Confidencial (Segredo Industrial / Propriedade Intelectual). Não se trata de dado pessoal, pois diz respeito às características físico-químicas do produto. Contudo, expressa o padrão de qualidade e a receita enológica da vinícola, devendo ser protegido contra vazamentos industriais.
@@ -35,6 +42,8 @@ Diante de uma solicitação de exclusão de dados, o fluxo estabelecido inicia-s
 ---
 
 ### Item c)
+> **Enunciado:** Identifique qual direito do titular, entre os previstos no art. 18 da LGPD, está sendo exercido pelo fornecedor, e qual base legal do art. 7º provavelmente amparava a coleta original do e-mail de contato.
+
 **Resposta:**  
 O fornecedor está exercendo o **Direito de Eliminação dos dados pessoais** (Art. 18, incisos II e VI da LGPD).  
 Quanto à coleta original, ela encontrava respaldo legal no **Art. 7º, inciso V da LGPD** (execução de contrato de fornecimento de matéria-prima). Embora o titular possua o direito de solicitar a eliminação de seus dados, a vinícola só é obrigada a realizar o apagamento imediato do e-mail caso o tratamento dependa exclusivamente do consentimento ou se a relação contratual já estiver totalmente encerrada. Havendo pendências contratuais ativas ou a necessidade de manutenção de registros para o cumprimento de obrigações legais ou fiscais (Art. 7º, II e Art. 16, I da LGPD, como a guarda de notas fiscais pelo prazo legal), a instituição possui respaldo legal para reter os dados estritamente necessários durante o prazo exigido por lei.
@@ -46,7 +55,12 @@ Quanto à coleta original, ela encontrava respaldo legal no **Art. 7º, inciso V
 
 ## Questão 2: Amostragem, Distribuição e Medidas Descritivas
 
+> **Enunciado Geral:**  
+> Um novo inspetor de qualidade propõe avaliar um lote de vinho analisando apenas as 30 primeiras garrafas listadas na planilha de controle, na ordem em que foram cadastradas, em vez de sortear as garrafas a analisar.
+
 ### Item a)
+> **Enunciado:** Explique por que esse procedimento não constitui uma amostragem aleatória e qual problema de representatividade ele pode gerar. Considerando que o lote é composto por três cultivares em proporções desiguais, indique qual das quatro técnicas de amostragem probabilística vistas em aula (aleatória simples, sistemática, estratificada ou por conglomerados) seria mais adequada, e justifique.
+
 **Resposta:**  
 O experimento não é estritamente aleatório, pois os elementos não tiveram a mesma probabilidade de seleção e a escolha não ocorreu de forma distribuída entre a população de interesse. Pegar as 30 primeiras garrafas da planilha é uma amostragem por conveniência e gera viés de seleção sistemático (podem ser todas do mesmo lote ou cultivar).  
 Como o lote é composto por três cultivares em proporções desiguais (Cultivar A: 59, Cultivar B: 71, Cultivar C: 48 garrafas), a abordagem mais adequada é a **amostragem estratificada proporcional**, visto que o ideal é dividir a amostra proporcionalmente entre os três grupos específicos, garantindo que cada cultivar seja representado fielmente no resultado final.
@@ -57,6 +71,8 @@ Como o lote é composto por três cultivares em proporções desiguais (Cultivar
 ---
 
 ### Item b)
+> **Enunciado:** Um colega afirma que "a média do teor alcoólico é sempre a melhor medida para comparar cultivares, porque a média é a medida de posição mais robusta". Avalie essa afirmação: explique em que circunstância a mediana é preferível à média, e explique o que o coeficiente de variação (CV) permite concluir que o desvio-padrão isolado não permite.
+
 **Resposta:**  
 A afirmação do colega está incorreta. A média não é a medida mais robusta; na verdade, ela é a menos resistente a valores extremos (tem ponto de ruptura de 0%). A **mediana** é preferível à média sempre que a distribuição for assimétrica ou contiver outliers, pois ela tem ponto de ruptura de 50% e não é distorcida por garrafas com valores anômalos.  
 O **Coeficiente de Variação (CV = desvio-padrão / média * 100)** é uma medida de dispersão relativa adimensional. Ele permite comparar a homogeneidade de grandezas que estão em escalas completamente diferentes (por exemplo, prolina na casa das centenas de mg/L e ácido málico na casa das unidades de g/L), algo que o desvio-padrão isolado não permite concluir por estar atrelado à unidade e à ordem de grandeza da média.
@@ -67,6 +83,8 @@ O **Coeficiente de Variação (CV = desvio-padrão / média * 100)** é uma medi
 ---
 
 ### Item c)
+> **Enunciado:** Sem realizar nenhum cálculo, explique por que o desvio-padrão de 1.000 médias amostrais (cada uma calculada a partir de amostras de tamanho n = 30) tende a ser menor que o desvio-padrão da população de onde essas amostras foram retiradas. Nomeie o teorema que garante esse resultado e escreva a relação matemática entre os dois desvios-padrão.
+
 **Resposta:**  
 O desvio-padrão de 1.000 médias amostrais tende a ser bem menor que o desvio-padrão individual porque, ao calcular a média de 30 garrafas, os valores extremos acima e abaixo da média se compensam mutuamente, fazendo com que as médias fiquem muito mais concentradas em volta da verdadeira média populacional.  
 O teorema que garante esse comportamento é o **Teorema Central do Limite (TCL)**, e a relação matemática formal entre o desvio-padrão das médias amostrais ($\sigma_{\bar{X}}$, ou erro-padrão) e o desvio-padrão da população ($\sigma$) é:
@@ -80,7 +98,12 @@ Para amostras com $n = 30$, o desvio-padrão das médias é reduzido em $\sqrt{3
 
 ## Questão 3: Correlação e Testes de Hipótese
 
+> **Enunciado Geral:**  
+> Ao analisar os dados de um lote, um colega obtém um valor-p de 0,03 em um teste de hipótese e conclui: "isso significa que há 97% de chance de a hipótese alternativa ser verdadeira".
+
 ### Item a)
+> **Enunciado:** Explique por que essa interpretação do valor-p está incorreta e escreva a interpretação correta. Em seguida, explique a diferença entre erro Tipo I e erro Tipo II, aplicando os dois conceitos a um exemplo de comparação entre dois cultivares de vinho.
+
 **Resposta:**  
 O valor-p (p-value) não determina categoricamente se uma hipótese está correta ou incorreta, nem diz que há 97% de chance de $H_1$ ser verdadeira. Na prática estatística, o valor-p mensura apenas a probabilidade de observar uma diferença tão ou mais extrema quanto a encontrada na amostra, assumindo que, no mundo real, os grupos comparados fossem rigorosamente iguais (Hipótese Nula $H_0$ verdadeira). Sendo $p = 0{,}03 < 0{,}05$, rejeita-se a hipótese de igualdade.
 
@@ -94,6 +117,8 @@ O valor-p (p-value) não determina categoricamente se uma hipótese está corret
 ---
 
 ### Item b)
+> **Enunciado:** Suponha que, ao comparar duas variáveis físico-químicas do vinho, o coeficiente de correlação de Pearson calculado seja r = 0,81, mas o teste de Shapiro-Wilk rejeite a normalidade (p < 0,05) para uma das duas variáveis. Explique por que aplicar o teste de significância de Pearson nessas condições é inadequado, e indique quais dois coeficientes de correlação alternativos poderiam ser usados, diferenciando-os brevemente.
+
 **Resposta:**  
 O teste de significância de Pearson requer o pressuposto de distribuição normal bivariada. Uma vez que o teste de Shapiro-Wilk rejeitou a normalidade ($p < 0{,}05$) para ao menos uma das variáveis, a distribuição da estatística $t$ deixa de ser válida, o que pode gerar distorções por assimetria ou presença de outliers, tornando o valor-p resultante não confiável.
 
@@ -108,6 +133,8 @@ As alternativas não paramétricas recomendadas são:
 ---
 
 ### Item c)
+> **Enunciado:** Explique por que um resultado "estatisticamente significativo" não é sinônimo de "relevante na prática", propondo um exemplo plausível envolvendo as 178 amostras do Wine Recognition Dataset.
+
 **Resposta:**  
 Ser estatisticamente significativo ($p < 0{,}05$) só significa que a diferença encontrada na amostra muito provavelmente não aconteceu por mero acaso ou sorte sob a hipótese nula. Porém, isso não quer dizer que essa diferença faça qualquer diferença no mundo real, já que testes com amostras razoáveis conseguem acusar como "significativas" até variações microscópicas.
 
@@ -124,6 +151,12 @@ Se compararmos o teor alcoólico de dois cultivares e encontrarmos uma diferenç
 ---
 
 ## Questão 4: Amostragem Estratificada e Teorema Central do Limite
+
+> **Enunciado da Questão:**  
+> a) Monte uma amostra estratificada por cultivar correspondente a 20% das observações de cada grupo, respeitando a proporção original de cada cultivar no dataset, com `random_state = 42` para garantir reprodutibilidade.  
+> b) Compare, em uma mesma figura, o histograma da variável `proline` na amostra estratificada e o histograma da mesma variável na população completa (178 amostras).  
+> c) A partir do tamanho da amostra obtida no item (a), realize 1.000 reamostragens com reposição da variável `proline` e calcule a média de cada reamostragem. Plote o histograma dessas 1.000 médias e compare, no texto, o desvio-padrão observado dessas médias com o valor teórico previsto pelo TCL ($\sigma / \sqrt{n}$), indicando quantas vezes o erro-padrão é menor que o desvio-padrão populacional.  
+> d) Conclua, em um parágrafo, se a amostra estratificada do item (a) é representativa da população quanto à variável `proline`.
 
 ### Código Python Utilizado
 ```python
@@ -187,6 +220,12 @@ A amostra estratificada de 20% ($n = 36$) representa fielmente a população de 
 ---
 
 ## Questão 5: Medidas de Posição, Dispersão e Outliers
+
+> **Enunciado da Questão:**  
+> a) Calcule, por cultivar, a média, a mediana, o desvio-padrão e o coeficiente de variação (CV) para as 13 variáveis físico-químicas do dataset, e identifique qual variável apresenta o maior CV médio entre os três cultivares.  
+> b) Aplicando a regra de $1{,}5 \times IQR$, identifique os outliers para as três variáveis com maior CV médio encontradas no item (a), e conte quantos outliers existem em cada cultivar, para cada uma dessas variáveis.  
+> c) Construa boxplots comparativos entre os três cultivares para essas três variáveis.  
+> d) Conclua, com base no CV calculado, se existe um único cultivar consistentemente mais homogêneo que os demais, ou se a homogeneidade varia conforme a variável analisada.
 
 ### Código Python Utilizado
 ```python
@@ -259,6 +298,11 @@ A variável `malic_acid` é a que apresenta maior dispersão relativa média no 
 
 ## Questão 6: Forma da Distribuição e Normalidade
 
+> **Enunciado da Questão:**  
+> a) Para as variáveis `magnesium`, `malic_acid`, `proanthocyanins` e `hue`, calcule o coeficiente de assimetria (*skewness*) considerando os três cultivares em conjunto, e classifique cada variável como aproximadamente simétrica, assimétrica à direita ou assimétrica à esquerda.  
+> b) Plote o histograma com curva de densidade (KDE) para cada uma das quatro variáveis.  
+> c) Para cada variável, decida, com base no valor de assimetria e na presença ou ausência de outliers, se a média ou a mediana representa melhor o valor típico da variável. Aplique o teste de Shapiro-Wilk em pelo menos duas dessas variáveis para confirmar ou refutar a normalidade sugerida pelo histograma.
+
 ### Código Python Utilizado
 ```python
 from scipy.stats import shapiro, skew
@@ -320,6 +364,12 @@ Os gráficos com KDE e os coeficientes de assimetria mostram que `magnesium` ($s
 
 ## Questão 7: Correlação, Significância e Redundância
 
+> **Enunciado da Questão:**  
+> a) Calcule a matriz de correlação completa entre as 13 variáveis e liste todos os pares com $|r| > 0{,}7$, excluindo o par `flavanoids × total_phenols` já analisado em aula.  
+> b) Para o par de maior $|r|$ encontrado no item (a), calcule manualmente a estatística $t$ de significância ($t = r \cdot \sqrt{n-2}/\sqrt{1-r^2}$) e confira o resultado com `scipy.stats.pearsonr`, interpretando o p-valor obtido com $\alpha = 0{,}05$.  
+> c) Verifique a normalidade (Shapiro-Wilk) das duas variáveis desse par. Caso alguma delas viole a normalidade, calcule também a correlação de Spearman e de Kendall para o mesmo par, comentando as diferenças encontradas em relação ao coeficiente de Pearson.  
+> d) Produza um heatmap da matriz de correlação completa e um scatter plot do par de maior correlação, colorido por cultivar e com a reta ajustada.
+
 ### Código Python Utilizado
 ```python
 import numpy as np
@@ -378,6 +428,12 @@ O par `flavanoids` e `od280/od315` possui correlação linear muito forte ($r = 
 
 ## Questão 8: Teste de Hipótese entre Dois Grupos
 
+> **Enunciado da Questão:**  
+> a) Compare o teor de `magnesium` entre o Cultivar B e o Cultivar C.  
+> b) Verifique a normalidade de cada grupo (Shapiro-Wilk) e a homogeneidade das variâncias entre os dois grupos (Levene).  
+> c) Com base no resultado do item (b), escolha e justifique o teste apropriado (teste t de Student, caso os pressupostos sejam atendidos, ou Kruskal-Wallis, caso não sejam), e interprete o p-valor obtido considerando $\alpha = 0{,}05$.  
+> d) Construa um boxplot comparativo dos dois grupos e redija, sem jargão estatístico, um parágrafo de conclusão para o enólogo-chefe.
+
 ### Código Python Utilizado
 ```python
 from scipy.stats import kruskal, levene, mannwhitneyu, shapiro, ttest_ind
@@ -424,6 +480,12 @@ tt_ref = ttest_ind(mag_b, mag_c, equal_var=True)
 ---
 
 ## Questão 9: ANOVA / Kruskal-Wallis com Post-Hoc
+
+> **Enunciado da Questão:**  
+> a) Verifique se o teor de `malic_acid` difere significativamente entre os três cultivares, checando a normalidade de cada grupo (Shapiro-Wilk) e a homogeneidade das variâncias entre os três grupos (Levene).  
+> b) Escolha e justifique o teste apropriado para comparar os três grupos (ANOVA ou Kruskal-Wallis), conforme o resultado do item (a).  
+> c) Caso o resultado seja significativo, aplique o teste post-hoc de Tukey HSD para identificar quais pares de cultivares diferem entre si.  
+> d) Construa um boxplot comparativo dos três cultivares e interprete o resultado em um parágrafo, evitando os erros de interpretação do valor-p discutidos em aula.
 
 ### Código Python Utilizado
 ```python
@@ -479,6 +541,13 @@ O teste não-paramétrico de Kruskal-Wallis comprova que o teor de ácido málic
 ---
 
 ## Questão 10: Questão Integradora
+
+> **Enunciado da Questão:**  
+> A diretoria da cooperativa avalia se é viável reduzir o número de testes laboratoriais por lote e se a diferença no teor alcoólico entre cultivares justifica uma política de preços diferenciada por cultivar.  
+> a) A partir da população completa (`load_wine`), monte uma amostra estratificada por cultivar correspondente a 60% das observações de cada grupo, com `random_state = 7`.  
+> b) Usando essa amostra, calcule a matriz de correlação completa e identifique as duas variáveis mais redundantes entre si, diferentes dos pares já utilizados na Questão 7.  
+> c) Ainda usando essa amostra, teste estatisticamente se há diferença significativa no teor de `alcohol` entre os três cultivares, escolhendo e justificando o teste apropriado a partir da verificação dos pressupostos de normalidade e homogeneidade de variâncias.  
+> d) Redija uma conclusão final, com no máximo 15 linhas, integrando: a representatividade da amostra construída no item (a), a redundância de variáveis identificada no item (b), e se a diferença no teor alcoólico encontrada no item (c) sustenta estatisticamente uma política de preços diferenciada por cultivar. A conclusão deve referenciar explicitamente as evidências estatísticas obtidas, não opiniões pessoais sobre o vinho.
 
 ### Código Python Utilizado
 ```python
