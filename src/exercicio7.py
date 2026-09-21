@@ -3,7 +3,7 @@
 Mapeia relações lineares e monótonas entre variáveis físico-químicas do vinho,
 deduz a estatística t de significância e avalia pressupostos paramétricos.
 
-Prompt de Auditoria Utilizado:
+Prompt Utilizado (Arquivo: prompts/exercicio7.md):
 "Escreva o código em Python para calcular manualmente a estatística t de Student
 do teste de hipótese para a correlação linear de Pearson e sua função de distribuição
 acumulada bilateral em scipy.stats.t. Em seguida, calcule a matriz 13x13 e filtre pares

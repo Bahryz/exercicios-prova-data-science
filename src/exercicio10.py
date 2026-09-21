@@ -3,7 +3,7 @@
 Integra subamostragem estratificada de 60%, identificação de redundâncias lineares para corte de custos
 laboratoriais e teste paramétrico (ANOVA + Tukey HSD) para sustentar política de preços por teor alcoólico.
 
-Prompt de Auditoria Utilizado:
+Prompt Utilizado (Arquivo: prompts/exercicio10.md):
 "Na amostra estratificada de 60% com random_state=7 do Wine Dataset, realize a filtragem de pares
 correlacionados excluindo o par já analisado na Q7 ('flavanoids' e 'od280/od315') e o par da aula
 ('flavanoids' e 'total_phenols'). Em seguida, verifique se a variável 'alcohol' atende aos pressupostos

@@ -34,7 +34,7 @@ O fornecedor exerce expressamente o **Direito de Eliminação dos Dados Pessoais
 
 A coleta original do e-mail de contato, por sua vez, encontrava amparo legítimo no **Artigo 7º, inciso V da LGPD**, que autoriza o tratamento de dados pessoais *"quando necessário para a execução de contrato ou de procedimentos preliminares relacionados a contrato do qual seja parte o titular, a pedido do titular dos dados"*, tendo em vista a necessidade de formalização de ordens de compra, emissão de notas fiscais e agendamento de pesagens de safra.
 
-#### Registro de Prompt Auditável
+#### Prompt Utilizado (Arquivo: [prompts/exercicio1.md](prompts/exercicio1.md))
 | Campo de Auditoria | Detalhamento do Registro |
 | :--- | :--- |
 | **Ferramenta Utilizada** | Antigravity AI Engine (Claude 3.7 / Gemini 2.5) |
@@ -64,7 +64,7 @@ $$\sigma_{\bar{X}} = \frac{\sigma}{\sqrt{n}}$$
 
 Para amostras de tamanho $n = 30$, a dispersão das médias amostrais é reduzida por um fator escalar de $\sqrt{30} \approx 5{,}477$, revelando-se aproximadamente 5,5 vezes menor que a variabilidade intrínseca de garrafas isoladas.
 
-#### Registro de Prompt Auditável
+#### Prompt Utilizado (Arquivo: [prompts/exercicio2.md](prompts/exercicio2.md))
 | Campo de Auditoria | Detalhamento do Registro |
 | :--- | :--- |
 | **Ferramenta Utilizada** | Antigravity AI Engine (Claude 3.7 / Gemini 2.5) |
@@ -94,7 +94,7 @@ A significância estatística é um critério matemático que atesta apenas que 
 
 *Exemplo Aplicado ao Wine Dataset (N = 178):* Suponha que o teor de cinzas (*ash*) entre dois cultivares apresente uma diferença com significância estatística ($p = 0{,}012$), porém com uma diferença média de apenas $0{,}04$ g/L (Cultivar A = $2{,}45$ g/L vs. Cultivar B = $2{,}41$ g/L, uma variação de $1{,}6\%$). Embora o teste estatístico rejeite $H_0$, essa microvariação é totalmente imperceptível ao paladar do consumidor, não afeta a turbidez nem o controle coloidal do vinho. Ela carece de relevância enológica e não justifica investimentos em filtragem ou mudanças de processo.
 
-#### Registro de Prompt Auditável
+#### Prompt Utilizado (Arquivo: [prompts/exercicio3.md](prompts/exercicio3.md))
 | Campo de Auditoria | Detalhamento do Registro |
 | :--- | :--- |
 | **Ferramenta Utilizada** | Antigravity AI Engine (Claude 3.7 / Gemini 2.5) |
@@ -162,7 +162,7 @@ observed_se = float(np.std(simulated_means, ddof=1))
 #### Gráfico Gerado
 ![Amostragem Estratificada e Teorema Central do Limite](file:///C:/Users/phbah/.gemini/antigravity-ide/scratch/exercicios-prova-data-science/outputs/exercicio4_proline_distribuicao_tcl.png)
 
-#### Registro de Prompt Auditável
+#### Prompt Utilizado (Arquivo: [prompts/exercicio4.md](prompts/exercicio4.md))
 | Campo de Auditoria | Detalhamento do Registro |
 | :--- | :--- |
 | **Ferramenta Utilizada** | Antigravity AI Engine (Claude 3.7 / Gemini 2.5) |
@@ -236,7 +236,7 @@ for var in top_3_features:
 #### Gráfico Gerado
 ![Boxplots Comparativos Top 3 CV](file:///C:/Users/phbah/.gemini/antigravity-ide/scratch/exercicios-prova-data-science/outputs/exercicio5_top3_cv_boxplots.png)
 
-#### Registro de Prompt Auditável
+#### Prompt Utilizado (Arquivo: [prompts/exercicio5.md](prompts/exercicio5.md))
 | Campo de Auditoria | Detalhamento do Registro |
 | :--- | :--- |
 | **Ferramenta Utilizada** | Antigravity AI Engine (Claude 3.7 / Gemini 2.5) |
@@ -300,7 +300,7 @@ for var in selected_vars:
 #### Gráfico Gerado
 ![Distribuições e Curvas KDE](file:///C:/Users/phbah/.gemini/antigravity-ide/scratch/exercicios-prova-data-science/outputs/exercicio6_distribuicoes_kde.png)
 
-#### Registro de Prompt Auditável
+#### Prompt Utilizado (Arquivo: [prompts/exercicio6.md](prompts/exercicio6.md))
 | Campo de Auditoria | Detalhamento do Registro |
 | :--- | :--- |
 | **Ferramenta Utilizada** | Antigravity AI Engine (Claude 3.7 / Gemini 2.5) |
@@ -363,7 +363,7 @@ tau_kendall, p_kendall = kendalltau(wine_df[var1], wine_df[var2])
 #### Gráfico Gerado
 ![Heatmap de Correlação e Scatter Plot](file:///C:/Users/phbah/.gemini/antigravity-ide/scratch/exercicios-prova-data-science/outputs/exercicio7_correlacao_heatmap_scatter.png)
 
-#### Registro de Prompt Auditável
+#### Prompt Utilizado (Arquivo: [prompts/exercicio7.md](prompts/exercicio7.md))
 | Campo de Auditoria | Detalhamento do Registro |
 | :--- | :--- |
 | **Ferramenta Utilizada** | Antigravity AI Engine (Claude 3.7 / Gemini 2.5) |
@@ -413,7 +413,7 @@ tt_ref = ttest_ind(mag_b, mag_c, equal_var=True)
 #### Gráfico Gerado
 ![Boxplot Magnésio Cultivar B vs C](file:///C:/Users/phbah/.gemini/antigravity-ide/scratch/exercicios-prova-data-science/outputs/exercicio8_magnesium_cultivar_b_c.png)
 
-#### Registro de Prompt Auditável
+#### Prompt Utilizado (Arquivo: [prompts/exercicio8.md](prompts/exercicio8.md))
 | Campo de Auditoria | Detalhamento do Registro |
 | :--- | :--- |
 | **Ferramenta Utilizada** | Antigravity AI Engine (Claude 3.7 / Gemini 2.5) |
@@ -473,7 +473,7 @@ tukey_result = pairwise_tukeyhsd(
 #### Gráfico Gerado
 ![Boxplot Ácido Málico entre os 3 Cultivares](file:///C:/Users/phbah/.gemini/antigravity-ide/scratch/exercicios-prova-data-science/outputs/exercicio9_malic_acid_cultivares.png)
 
-#### Registro de Prompt Auditável
+#### Prompt Utilizado (Arquivo: [prompts/exercicio9.md](prompts/exercicio9.md))
 | Campo de Auditoria | Detalhamento do Registro |
 | :--- | :--- |
 | **Ferramenta Utilizada** | Antigravity AI Engine (Claude 3.7 / Gemini 2.5) |
@@ -549,7 +549,7 @@ tukey_alc = pairwise_tukeyhsd(
 #### Gráfico Gerado
 ![Boxplot Teor Alcoólico por Cultivar Amostra 60%](file:///C:/Users/phbah/.gemini/antigravity-ide/scratch/exercicios-prova-data-science/outputs/exercicio10_alcohol_cultivares.png)
 
-#### Registro de Prompt Auditável
+#### Prompt Utilizado (Arquivo: [prompts/exercicio10.md](prompts/exercicio10.md))
 | Campo de Auditoria | Detalhamento do Registro |
 | :--- | :--- |
 | **Ferramenta Utilizada** | Antigravity AI Engine (Claude 3.7 / Gemini 2.5) |
